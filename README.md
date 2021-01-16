@@ -6,6 +6,7 @@
 - [Built With](#built-with)
 - [Getting Started](#getting-started)
 - [Accessing the Application](#accessing-the-application)
+- [Citations](#Citations)
 
 ## About
 
@@ -63,3 +64,10 @@ npx http-server dist
   http://127.0.0.1:8080
   http://192.168.35.161:8080
   Hit CTRL-C to stop the server'
+
+## Citations
+
+I used information from the following links to create this repo:
+
+- https://www.robinwieruch.de/minimal-react-webpack-babel-setup
+- https://www.robinwieruch.de/webpack-advanced-setup-tutorial
