@@ -1,9 +1,9 @@
-const webpack = require("webpack");
 const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: path.resolve(__dirname, "./src/index.js"),
+  entry: path.resolve(__dirname, "..", "./src/index.js"),
   module: {
     rules: [
       {
@@ -17,19 +17,14 @@ module.exports = {
     extensions: ["*", ".js", ".jsx"],
   },
   output: {
-    path: path.resolve(__dirname, "./dist"),
+    path: path.resolve(__dirname, "..", "./dist"),
     filename: "bundle.js",
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Base React Webpack Babel Template",
-      template: path.resolve(__dirname, "./src/index.html"),
+      template: path.resolve(__dirname, "..", "./src/index.html"),
     }),
   ],
-  devServer: {
-    contentBase: path.resolve(__dirname, "./dist"),
-    hot: true,
-  },
-  devtool: "source-map",
 };

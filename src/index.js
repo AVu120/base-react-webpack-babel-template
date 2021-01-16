@@ -6,4 +6,5 @@ const title = "React with Webpack and Babel";
 
 ReactDOM.render(<App title={title} />, document.getElementById("app"));
 
-module.hot.accept();
+// Comment below before building for production.
+// module.hot.accept();
